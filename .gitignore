@@ -1,0 +1,11 @@
+#saved elsewhere for security
+development.ini
+apacheconf/access.log
+apacheconf/error.log
+*~
+*.pyc
+.svn
+*.mp3
+*.zip
+*.m4a
+README.txt

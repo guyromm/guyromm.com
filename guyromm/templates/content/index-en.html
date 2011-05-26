@@ -1,0 +1,38 @@
+<% import guyromm.lib.helpers as h %>
+<%inherit file="base.html" />
+<%def name="title()">Guy Romm - Web Development with a Smile!</%def>
+<%def name="main_header()">Web Development with a Smile</%def>
+<%def name="current_location()">Tel-Aviv, Israel</%def>
+<%def name="main_content()">
+<!--content_start(name:main_content,type:markup)--><h2>Welcome to GuyRomm.com!</h2>
+
+<p>The aim of this website is to introduce its visitors to who I am, what I am up to, and how I could potentially assist you with your ideas and business endeavours .<br />
+<br />
+<a href="${url.current(content='about_me')}">&gt;&gt;&gt; Read on for a brief summary</a></p><!--content_end(name:main_content)-->
+
+<p>Here are quick pointers to things I've done:</p>
+
+<div class='item'>
+<a href='http://www.greenie.co.il/en/'><img src='/images/snapshots/greenie.png' alt="greenie screenshot" /></a>
+<div class='descr'><a href='http://www.greenie.co.il/en/'>Greenie.co.il</a> tries to encourage bicycle deliveries in Israel</div></div>
+ 
+ <div class='item'>
+ <a href='http://www.bastarbut.com/'><img src='/images/snapshots/bastarbut.png' alt="bastarbut screenshot" /></a>
+ <div class='descr'><a href='http://www.bastarbut.com/'>Bastarbut.com</a> is an online shop for fringe culture creations, literature and comic books.</div></div>
+
+ <div class='item'>
+ <a href='/images/route.png'><img src='/images/snapshots/biketrip.png' alt="biketrip route screenshot" /></a>
+ <div class='descr'>I've spent the summer of 2008 crossing Europe on my bicycle.</div></div>
+
+ <div class='item'>
+ <a href='http://www.tet.co.il/en/'><img src='/images/snapshots/tet.png' alt="tet screenshot" /></a>
+ <div class='descr'><a href='http://www.tet.co.il/en/'>Tet.co.il</a> is a free, multilingual, facebook-enabled Israeli classifieds board in the spirit of Craigslist.</div></div>
+ 
+ 
+ 
+</%def>
+<%def name="main_menu()">
+<a href="${url.current(content='about_me')}">About me</a> &nbsp; &nbsp; &nbsp; &nbsp;  
+<a href="${url.current(content='skills_and_experience')}">Skills &amp; Experience</a> &nbsp; &nbsp; &nbsp; &nbsp;  
+<a href="${url.current(content='contact')}">Contact</a> &nbsp; &nbsp; &nbsp; &nbsp;
+</%def>

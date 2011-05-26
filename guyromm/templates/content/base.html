@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--
+Author: Reality Software
+Website: http://www.realitysoftware.ca
+Note: This is a free template released under the Creative Commons Attribution 3.0 license, 
+which means you can use it in any way you want provided you keep the link to the author intact.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>${self.title()}</title><!--content_end(name:title)-->
+<link rel="stylesheet" type="text/css" href="/style.css"/>
+</head>
+<%def name="extra_css()"></%def>
+${self.extra_css()}
+<body>
+
+<div id="container">
+
+<div id="header">
+<a href="${url.current(content='index')}">${self.main_header()}</a>
+
+</div>
+
+<div id="menu">
+
+
+${self.main_menu()}
+
+<!--content_start(name:main_menu,type:markup)--><!--content_end(name:main_menu)-->
+
+</div>
+<%def name="sidebar_heading()">Guy Romm's website</%def>
+<%def name="current_location_lbl()">Current location</%def>
+<%def name="sidebar_bottom()">
+<ul class=stream>
+<li><a href="http://photos.guyromm.com/">Photos</a></li>
+<li><a href="http://blog.guyromm.com/">Blog</a></li>
+</ul>
+
+% if len(c.posts):
+<h4>Facebook stream</h4>
+<small><a href="http://www.facebook.com/guyromm">link to profile</a></small><br />
+<ul class=stream>
+<% import re %>
+% for p in c.posts:
+% if len(p['message']): 
+<li>${re.compile('http\:\/\/([^ \/]*)([^ ]*)').sub('<a href="http://\\1\\2">\\1</a>',p['message'][:70])|n}\
+% if len(p['message'])>70:
+...
+% endif
+</li>
+% endif
+
+% endfor
+</ul>
+% endif
+</%def>
+<%def name="sidebar()">
+<div id="sidebar">
+
+<h1>${self.sidebar_heading()}</h1>
+
+
+<p>${self.current_location_lbl()}: <b>${self.current_location()}.</b></p>
+
+% if c.langsavail:
+<p>
+[
+% for lang in c.langsavail:
+<a href="${url.current(lang=lang)}">${c.lang_labels[lang]}</a>
+% if lang != c.langsavail[-1]:
+&nbsp;,&nbsp;
+% endif
+% endfor
+]
+</p>
+% endif
+<p>
+${self.sidebar_bottom()}
+</p>
+</div>
+</%def>
+## end of sidebar
+${self.sidebar()}
+
+<div id="main">
+<%def name="text_div_params()"></%def>
+<div id="text" ${self.text_div_params()}>
+${self.main_content()}
+</div>
+
+<div class="clear"></div>
+
+</div>
+
+<div id="footer">
+<%def name="footer_txt()">
+&copy;2008 Guy Romm
+</%def>
+${self.footer_txt()} &nbsp;<span class="separator">|</span> &nbsp; 
+
+<!-- DO NOT DELETE THIS LINK! READ THE LICENSE! -->
+Design by <a href="http://www.realitysoftware.ca" title="Website Design">Reality Software</a>
+<!-- ****************************************** -->
+</div>
+
+</div>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-135121-2");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+</body>
+</html>

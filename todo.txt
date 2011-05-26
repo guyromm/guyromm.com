@@ -1,0 +1,2 @@
+* add route.png and route-small.png to images/
+* add links to photos and blog on sidebar

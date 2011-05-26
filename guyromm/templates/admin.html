@@ -1,0 +1,31 @@
+<%inherit file="content/base.html" />
+<%def name="title()">Admin</%def>
+<%def name="main_header()">Admin</%def>
+<%def name="main_menu()"></%def>
+<%def name="current_location()"></%def>
+<%def name="sidebar()"></%def>
+<%def name="text_div_params()">style='margin-left:0px'</%def>
+<%def name="main_content()">
+<table>
+<thead><tr>
+<td>content</td>
+% for lang in c.alllangs:
+<td>${lang}</td>
+% endfor
+</tr></thead>
+
+% for content in c.allcontents:
+<tr><td>${content}</td>
+% for lang in c.alllangs:
+<td><a href="${url.current(action='edit',lang=lang,content=content)}">
+% if '%s-%s'%(lang,content) in c.contentsdict:
+X
+% else:
+--
+% endif
+</a></td>
+% endfor
+</tr>
+% endfor
+</table>
+</%def>

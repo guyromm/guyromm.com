@@ -1,0 +1,13 @@
+<html>
+<body>
+<form method='post'>
+data in JSON format (like <b>[1234,12345,123456]</b>.. or <b>'Jan 1, 2011'</b>)
+<input type='text' name='enc' value="${request.params.get('enc')}" />
+<input type='submit' value='Go' /><br />
+% if c.output:
+Your output:<br />
+<b>${c.output}</b>
+% endif
+</form>
+</body>
+</html>
