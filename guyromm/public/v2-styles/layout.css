@@ -1,0 +1,436 @@
+/*
+* Skeleton V1.2
+* Copyright 2011, Dave Gamache
+* www.getskeleton.com
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+* 6/20/2012
+*/
+
+/* Table of Content
+==================================================
+	#Site Styles
+	#Page Styles
+	#Media Queries
+	#Font-Face */
+
+/* #Site Styles
+================================================== */
+
+/* #Page Styles
+================================================== */
+
+/* #Media Queries
+================================================== */
+
+	/* Smaller than standard 960 (devices and browsers) */
+	@media only screen and (max-width: 959px) {}
+
+	/* Tablet Portrait size to standard 960 (devices and browsers) */
+	@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+	/* All Mobile Sizes (devices and browser) */
+	@media only screen and (max-width: 767px) {}
+
+	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+	@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+	@media only screen and (max-width: 479px) {}
+
+
+/* #Font-Face
+================================================== */
+/* 	This is the proper syntax for an @font-face file
+		Just create a "fonts" folder at the root,
+		copy your FontName into code below and remove
+		comment brackets */
+
+/*	@font-face {
+	    font-family: 'FontName';
+	    src: url('../fonts/FontName.eot');
+	    src: url('../fonts/FontName.eot?iefix') format('eot'),
+	         url('../fonts/FontName.woff') format('woff'),
+	         url('../fonts/FontName.ttf') format('truetype'),
+	         url('../fonts/FontName.svg#webfontZam02nTh') format('svg');
+	    font-weight: normal;
+	    font-style: normal; }
+*/
+@font-face{
+font-family: 'Helvetica Neue';
+src: url('../fonts/helveticaneueltstd-mdlt.otf');
+font-weight: normal;
+font-style: normal;
+}
+
+body{
+background:#fff;
+font-family:  Helvetica Neue, Helvetica, Arial, sans-serif;
+background:  url('../images/handmadepaper.png') /* #e4e4e4 */ ;
+color:#2b2b2b;
+}
+
+/*css-reset settings*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/*font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	/*line-height: 1;*/
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+font-size: 12px;
+ line-height: 1.3;
+}
+
+h1 {
+font-size: 3.0em;
+}
+
+h2 {
+font-size: 2.0em;
+font-weight: 400;
+}
+
+h3 {
+font-size: 1.75em;
+color: #F1684E;
+font-weight: 400;
+
+}
+
+h4 {
+font-size: 1.5em;
+font-weight: 400;
+}
+
+/*h1, h2, h3, h4{margin-top: 10px; margin-bottom: 10px;}*/
+
+blockquote {
+font-size: 1.5em;
+}
+
+p,li {
+font-size: 1.3em;
+}
+
+input {
+font-size: 1.0em;
+}
+
+small {
+font-size: 0.75em;
+}
+
+a {
+	color: #F1684E;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #F1684E;
+	text-decoration: underline;
+}
+header{
+	/*position: fixed;*/
+	display: block;
+}
+
+
+/*Map the correct css style to create the fixed position*/
+div#header-fixed {position:fixed; top:0px; margin:auto; z-index:100000; width:100%;}
+div#my-menus  {background:#000; height:75px; opacity:0.75}
+
+
+#navigation {
+margin-top: 40px;
+float: left;
+position: relative;
+z-index: 1;
+}
+ul#navigation  li, ul#social  li {
+float: left;
+list-style: none;
+}
+
+ul#navigation  li {
+margin: 0 20px 0 0;
+}
+
+ul#social  li {
+margin: 0 15px 10px 0;
+}
+
+ul#navigation  li{
+color: #3d3d3d;	
+}
+
+ul#navigation  li a.selected {
+color:  #F1684E;
+}
+
+ul#navigation  li a:hover {
+color: #F1684E;
+}
+
+ ul#navigation  li a , ul#social  li a {
+
+text-decoration: none;
+}
+
+ul#navigation  li a {
+color: #838383;         /* #bcbcbc; */
+font-size: 18px;
+font-weight: 500;
+}
+
+#social{
+	float:right;
+	margin-top: 35px;
+}
+.social_twitter, .social_linkedin, .social_github, .social_skype, .social_google
+{
+	display: block;
+	
+	height: 32px;
+	width: 32px;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+
+}
+
+.social_twitter{background: url("../images/twitter.png") no-repeat;} 
+.social_linkedin{background: url("../images/linkedin.png") no-repeat;}
+.social_github{background: url("../images/github.png") no-repeat;}
+.social_skype{background: url("../images/skype.png") no-repeat;}
+.social_google{background: url("../images/google.png") no-repeat;}
+
+
+.social_twitter:hover{background: url("../images/twitter2.png") no-repeat;} 
+.social_linkedin:hover{background: url("../images/linkedin1.png") no-repeat;}
+.social_github:hover{background: url("../images/github1.png") no-repeat;}
+.social_skype:hover{background: url("../images/skype1.png") no-repeat;}
+.social_google:hover{background: url("../images/google1.png") no-repeat;}
+
+.welcome{
+	position: relative;
+	padding: 15px 0;
+	/*border: 1px dashed #9b9b9b;
+	border-right: none;
+	border-left: none;*/
+	margin: 40px auto;
+}
+.welcome h2{
+	text-align: left;
+	padding-top: 60px;
+}
+
+		#thumbnails {
+			margin: 0 0 0 0;
+			/*padding-bottom: 35px;*/
+			float: left;
+			clear: both;
+			}
+			
+		#thumbnails li {
+			width: 233px;
+			height: 233px;
+			float: left;
+			margin-right: 7px;
+			margin-bottom: 7px;
+			}
+			
+		#thumbnails li, #thumbnails a {
+			line-height: 0;
+			position: relative;
+			}
+		
+		#thumbnails a, #thumbnails a:visited {
+			width: 233;
+			height: 233;
+			display: block;
+			position: relative;
+			z-index: 1;
+			-webkit-transition: box-shadow 0.095s linear;
+			   -moz-transition: box-shadow 0.065s linear;
+			     -o-transition: box-shadow 0.065s linear;
+			    -ms-transition: box-shadow 0.065s linear;
+			        transition: box-shadow 0.065s linear;
+			}
+			
+		#thumbnails a:hover {
+			margin: -10px;
+			width: 266px;
+			height: 266px;
+			position: absolute;
+			z-index: 3;
+			-webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.65);
+	    	-moz-box-shadow: 0 15px 25px rgba(0, 0, 0, 0.65);
+	    	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.65);
+
+			}
+			
+		#thumbnails img {
+			width: 100%;
+			height: 100%;
+			float: left;
+			}
+
+
+
+
+
+.skills{
+	margin-bottom: 40px;
+
+}
+.skills ul li{
+	list-style: none; /* Убираем исходные маркеры */
+    background: url('../images/icon_arrow_right.png') no-repeat 0 4px; /* Параметры фона */
+    padding-left: 18px;
+}
+
+.skills h2{
+	margin-top:10px;
+	margin-bottom: 10px;
+}
+
+h1.center{
+	text-align: center;
+	color:#F1684E;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: 400;
+	border-top: 1px solid #2b2b2b;
+	border-bottom: 1px solid #2b2b2b;
+}
+.portfolio{
+	margin-top: 40px;
+}
+h1.portfolio{
+	margin-bottom: 20px;
+}
+.portfolio_item
+{
+	width: 100%;
+	display: block;
+	clear:both;
+	border-bottom: 1px solid #2b2b2b;
+	padding-bottom: 40px;
+	margin-top: 40px;
+	float: left;
+}
+
+.portfolio_item:last-child{
+	border: none;
+	padding-bottom: 0;
+}
+.portfolio_item h3{
+	
+}
+.portfolio_item h4{
+	margin-bottom: 15px;
+	color:#bcbcbc;
+
+}
+.portfolio_desc{
+	float: left;
+	width: 40%;
+	margin-right: 2%
+}
+
+.portfolio_desc p {
+	margin-bottom: 10px;
+}
+.portfolio_image{
+	float: right;
+	width: 58%
+}
+.contact{
+	padding-top: 40px;
+}
+.contact_info_left{
+	float: left;
+	width: 40%;
+}
+.contact_form_right{
+	width:55%;
+	float: left;
+}
+.left_col{
+	width:38%;
+	float: left;
+	padding-right: 2%;
+}
+.right_col{
+	width: 60%;
+	position: relative;
+	float: left;
+}	
+.contact_form input[type="text"] {
+	font-size: 22px;
+
+padding: 10px;
+border: 1px solid #c9c9c9;
+margin-bottom: 10px;
+width: 100%;
+
+}
+
+ input[type="text"]::-webkit-input-placeholder {
+    font-weight: 400;
+   } 
+   input[type="text"]:-moz-placeholder {
+    font-weight: 400;
+   }
+.contact_form textarea {
+height: 148px;
+font-size: 15px;
+padding: 10px;
+border: 1px solid #c9c9c9;
+margin-bottom: 10px;
+margin-left: 20px;
+width: 100%;
+}
+.footerInner{
+margin: 0 auto;
+max-width: 940px;
+position: relative;
+}
+.footer p{
+	text-align: center;
+	margin-top: 20px;
+}
+.footer { margin-bottom:400px; }
+

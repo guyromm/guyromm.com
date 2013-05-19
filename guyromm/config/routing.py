@@ -22,7 +22,7 @@ def make_map():
     #map.connect('/',controller='index',action='index',lang='en')
     #map.connect('/:lang/',controller='index',action='index')
     #map.connect('/:lang/:controller/',action='index')
-
+    map.connect('/v2',controller='content',action='v2')
     map.connect('/',controller='content',action='serve',content='index',lang='en')
     map.connect('/{lang:(he|en)}/',controller='content',action='serve',content='index')
     map.connect('/{content}/',controller='content',action='serve',lang='en')

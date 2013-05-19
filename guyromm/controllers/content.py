@@ -12,6 +12,8 @@ log = logging.getLogger(__name__)
 posts = None
 
 class ContentController(BaseController):
+    def v2(self):
+        return render('v2.html')
     def serve(self,lang,content):
         if request.params.get('exc',False):
             raise Exception('testicle')

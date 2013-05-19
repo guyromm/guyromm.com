@@ -9,3 +9,5 @@ apacheconf/error.log
 *.zip
 *.m4a
 README.txt
+venv
+*.egg
