@@ -6,7 +6,7 @@ from pylons.controllers.util import abort, redirect as redirect_to
 
 from guyromm.lib.base import BaseController, render
 #from guyromm import model
-from facebook.wsgi import facebook
+#from facebook.wsgi import facebook
 
 log = logging.getLogger(__name__)
 posts = None
