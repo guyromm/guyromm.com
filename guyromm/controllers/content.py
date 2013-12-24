@@ -6,27 +6,18 @@ from pylons.controllers.util import abort, redirect as redirect_to
 
 from guyromm.lib.base import BaseController, render
 #from guyromm import model
-from facebook.wsgi import facebook
 
 log = logging.getLogger(__name__)
-posts = None
 
 class ContentController(BaseController):
     def serve(self,lang,content):
         if request.params.get('exc',False):
             raise Exception('testicle')
-        #raise Exception(facebook.stream.get(viewer_id=501647019))
+
         if request.params.get('exc',False): raise Exception('whatevah1')
         import datetime
         c.myage = (datetime.datetime.now()-datetime.datetime(1982,8,14)).days/365
-        global posts
-        if not posts or not len(posts):
-            try:
-                c.posts = posts = facebook.fql.query("select post_id,action_links,comments,likes,target_id,actor_id,message,attribution,created_time from stream where viewer_id=501647019 and  source_id=501647019 and actor_id=501647019 order by created_time desc")
-            except:
-                c.posts=[]
-        else:
-            c.posts = posts
+        c.posts=[]
 
         langs = ['he','en']
         if lang not in langs:
